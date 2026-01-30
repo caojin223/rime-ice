@@ -63,7 +63,8 @@ engine:
     - lua_translator@*date_translator    # 时间、日期、星期
     - lua_translator@*lunar              # 农历
     - lua_translator@*uuid               # UUID
-    - table_translator@custom_phrase     # 自定义短语 custom_phrase.txt
+    - table_translator@custom_phrase         # 自定义短语 custom_phrase.txt
+    - table_translator@custom_phrase_private  # 私有自定义短语 custom_phrase_private.txt
     - table_translator@melt_eng          # 英文输入
     - table_translator@cn_en             # 中英混合词汇
     - table_translator@radical_lookup    # 部件拆字反查
@@ -82,6 +83,7 @@ engine:
     - simplifier@emoji                              # Emoji
     - simplifier@traditionalize                     # 简繁切换
     - lua_filter@*search@radical_pinyin             # 部件拆字辅码
+    - lua_filter@*stroke_filter                     # 笔画过滤
     - uniquifier                                    # 去重
 
 
@@ -181,7 +183,7 @@ translator:
 melt_eng:
   dictionary: melt_eng     # 挂载词库 melt_eng.dict.yaml
   enable_sentence: false   # 禁止造句
-  enable_user_dict: false  # 禁用用户词典
+  enable_user_dict: true   # 启用用户词典，根据使用频率自动调频
   initial_quality: 1.1     # 初始权重
   comment_format:          # 自定义提示码
     - xform/.*//           # 清空提示码
@@ -207,6 +209,15 @@ custom_phrase:
   enable_completion: false  # 补全提示
   enable_sentence: false    # 禁止造句
   initial_quality: 99       # custom_phrase 的权重应该比 pinyin 和 melt_eng 大
+
+# 私有自定义短语：custom_phrase_private.txt（不上传 GitHub）
+custom_phrase_private:
+  dictionary: ""
+  user_dict: custom_phrase_private
+  db_class: stabledb
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 99
 
 
 # Emoji
@@ -272,10 +283,21 @@ recognizer:
     gregorian_to_lunar: "^N[0-9]{1,8}"  # 脚本将自动获取第 2 个字符 N 作为触发前缀，响应 lua_translator@*lunar，公历转农历，输入 N20240115 得到「二〇二三年腊月初五」
 
 
+# Lua 配置：笔画过滤
+# 输入拼音后按引导键（默认分号），再输入笔画码 h/s/p/n/d/z 过滤候选
+# h=横 s=竖 p=撇 n=d=捺/点 z=折（n 和 d 等价）
+# 示例：输入 wo; 然后输入 pn 或 pd，将只显示笔画以"撇捺"开头的字（如"我"）
+stroke_filter:
+  key: ";"              # 笔画引导键
+  db: stroke            # 笔画数据库名称（对应 stroke.dict.yaml）
+  show_other_cands: false  # 是否显示不匹配的候选（置于末尾）
+
+
 # 从 default 继承快捷键
 key_binder:
   import_preset: default  # 从 default.yaml 继承通用的
   search: "`"             # 辅码引导符，要添加到 speller/alphabet
+  stroke: ";"             # 笔画引导符，要添加到 speller/alphabet
   # bindings:             # 也可以再增加方案专有的快捷键
 
 
@@ -296,8 +318,8 @@ editor:
 # 拼写设定
 speller:
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
-  # initials 定义仅作为始码的按键，排除 ` 让单个的 ` 可以直接上屏
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`;
+  # initials 定义仅作为始码的按键，排除 ` ; 让单个的 ` ; 可以直接上屏
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   delimiter: " '"  # 第一位<空格>是拼音之间的分隔符；第二位<'>表示可以手动输入单引号来分割拼音。
   algebra:
