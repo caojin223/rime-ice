@@ -66,8 +66,8 @@ engine:
     - lua_translator@*uuid               # UUID
     - table_translator@custom_phrase         # 自定义短语 custom_phrase.txt
     - table_translator@custom_phrase_private  # 私有自定义短语 custom_phrase_private.txt
+    - lua_translator@*user_english_translator  # 用户英文词典（动态加载，优先于 melt_eng）
     - table_translator@melt_eng          # 英文输入
-    - lua_translator@*user_english_translator  # 用户英文词典（动态加载，即时生效）
     - table_translator@cn_en             # 中英混合词汇
     - table_translator@radical_lookup    # 部件拆字反查
     - lua_translator@*unicode            # Unicode

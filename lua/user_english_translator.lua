@@ -78,12 +78,17 @@ function M.init(env)
     env.user_words = load_user_words(env.user_dict_path)
     env.last_mtime = get_file_mtime(env.user_dict_path)
     
-    log.info("[user_english_translator] Loaded user dict: " .. env.user_dict_path)
+    -- 统计加载的词条数量
+    local count = 0
+    for _ in pairs(env.user_words) do
+        count = count + 1
+    end
+    log.info("[user_english_translator] Loaded " .. count .. " entries from " .. env.user_dict_path)
 end
 
 function M.func(input, seg, env)
-    -- 只处理 abc 类型的输入（字母输入）
-    if seg:has_tag("abc") == false then
+    -- 检查输入是否为纯英文
+    if not input:match("^[a-zA-Z][a-zA-Z0-9%.%_%-]*$") then
         return
     end
     
@@ -94,14 +99,13 @@ function M.func(input, seg, env)
     if current_mtime ~= env.last_mtime then
         env.user_words = load_user_words(env.user_dict_path)
         env.last_mtime = current_mtime
-        log.info("[user_english_translator] Reloaded user dict")
     end
     
     -- 查找完全匹配的词条
     if env.user_words[input_lower] then
         for _, word in ipairs(env.user_words[input_lower]) do
-            local cand = Candidate("user_english", seg.start, seg._end, word, "")
-            cand.quality = 1.0  -- 权重
+            local cand = Candidate("user_english", seg.start, seg._end, word, "☆")
+            cand.quality = 100  -- 高权重，确保排在前面
             yield(cand)
         end
     end
@@ -110,8 +114,8 @@ function M.func(input, seg, env)
     for code, words in pairs(env.user_words) do
         if code ~= input_lower and code:sub(1, #input_lower) == input_lower then
             for _, word in ipairs(words) do
-                local cand = Candidate("user_english", seg.start, seg._end, word, "~")  -- ~ 表示补全
-                cand.quality = 0.8
+                local cand = Candidate("user_english", seg.start, seg._end, word, "~")
+                cand.quality = 50
                 yield(cand)
             end
         end

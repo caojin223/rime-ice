@@ -338,3 +338,39 @@ Thanks to JetBrains for the OSS development license.
 
 <img src="./others/sponsor.webp" alt="请 Dvel 吃个煎饼馃子" width=300 />
 
+<br>
+
+---
+
+## 个人定制功能
+
+以下是基于雾凇拼音的个人定制扩展功能。
+
+### 英文词组自动学习
+
+**功能描述**：当输入英文单词/缩写后按回车上屏时，自动记住该词条，下次输入时会出现在候选列表中（带 ☆ 标记）。类似搜狗输入法的英文学习功能。
+
+**使用方式**：
+
+| 操作 | 方法 | 说明 |
+|------|------|------|
+| 学习英文 | 输入英文 → 按回车上屏 | 自动记录，下次即时生效 |
+| 删除英文 | 选中候选 → Fn+Shift+Back | 与中文删除方式一致 |
+
+**相关文件**：
+
+| 文件 | 作用 |
+|------|------|
+| `lua/commit_english_learner.lua` | 学习+删除逻辑（processor） |
+| `lua/user_english_translator.lua` | 动态生成候选项（translator） |
+| `en_dicts/user_en.txt` | 存储学习的英文词条 |
+
+**技术实现**：
+
+1. `commit_english_learner`（processor）拦截回车键，将纯英文输入写入 `user_en.txt`
+2. `user_english_translator`（translator）动态读取词典文件，即时生成候选项
+3. 新词条无需重新部署即可生效
+4. 删除快捷键与中文保持一致，自动读取 `editor/bindings` 的 `delete_candidate` 配置
+
+**版本**：2026-02-02
+
