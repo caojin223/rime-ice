@@ -1,0 +1,11 @@
+# Rime table
+# coding: utf-8
+#@/db_name	user_en.txt
+#@/db_type	tabledb
+#
+# 用户英文词典 - 由 commit_english_learner.lua 自动生成
+# 重新部署后新词条生效
+# 格式：词条<Tab>编码
+#
+# 此行之后不能写注释
+meegle	meegle
