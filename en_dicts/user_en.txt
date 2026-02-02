@@ -8,7 +8,8 @@
 # 格式：词条<Tab>编码
 #
 # 此行之后不能写注释
-meggle	meggle
-ccy	ccy
 wbl	wbl
+ccy	ccy
+bug	bug
 kufox	kufox
+meegle	meegle

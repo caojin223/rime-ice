@@ -42,18 +42,13 @@ local function load_user_words(filepath)
     return words
 end
 
--- 获取文件修改时间（用于检测文件变化）
-local function get_file_mtime(filepath)
+-- 获取文件大小（作为简单的变化检测）
+local function get_file_size(filepath)
     local file = io.open(filepath, "r")
     if file then
+        local size = file:seek("end")
         file:close()
-        -- Lua 没有直接获取 mtime 的方法，用文件内容长度作为简单的变化检测
-        local f = io.open(filepath, "r")
-        if f then
-            local content = f:read("*a")
-            f:close()
-            return #content
-        end
+        return size
     end
     return 0
 end
@@ -76,7 +71,8 @@ function M.init(env)
     
     -- 初始加载词典
     env.user_words = load_user_words(env.user_dict_path)
-    env.last_mtime = get_file_mtime(env.user_dict_path)
+    env.last_size = get_file_size(env.user_dict_path)
+    env.last_check_time = 0
     
     -- 统计加载的词条数量
     local count = 0
@@ -94,11 +90,16 @@ function M.func(input, seg, env)
     
     local input_lower = input:lower()
     
-    -- 检查文件是否有更新，如果有则重新加载
-    local current_mtime = get_file_mtime(env.user_dict_path)
-    if current_mtime ~= env.last_mtime then
-        env.user_words = load_user_words(env.user_dict_path)
-        env.last_mtime = current_mtime
+    -- 检查文件是否有更新（每2秒检查一次，避免频繁IO）
+    local current_time = os.time()
+    if current_time - env.last_check_time >= 2 then
+        local current_size = get_file_size(env.user_dict_path)
+        if current_size ~= env.last_size then
+            env.user_words = load_user_words(env.user_dict_path)
+            env.last_size = current_size
+            log.info("[user_english_translator] Reloaded user dict, size: " .. current_size)
+        end
+        env.last_check_time = current_time
     end
     
     -- 查找完全匹配的词条
