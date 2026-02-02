@@ -29,6 +29,7 @@
 # 此行之后不能写注释
 
 啊	a	100
+agent	agent	1000
 爱	ai	100
 安	an	100
 不	b	100
@@ -179,6 +180,8 @@ cd	cd	100
 活	huo	99
 好像	hx	100
 就	j	100
+java	java	100
+jdk	jdk	100
 几	ji	100
 挤	ji	99
 家	jia	100
@@ -517,6 +520,8 @@ U盘	upan	100
 样	yang	100
 阳	yang	99
 杨	yang	98
+验证	yanz	100
+严重	yanz	99
 要	yao	100
 要不要	yby	100
 也	ye	100
@@ -594,6 +599,7 @@ U盘	upan	100
 桌	zhuo	100
 捉	zhuo	99
 卓	zhuo	98
+在不在	zbz	100
 子	zi	100
 怎么	zm	100
 总	zong	100
@@ -604,3 +610,4 @@ U盘	upan	100
 做	zuo	100
 左	zuo	99
 ←	zuo	98
+昨晚	zuow	100
