@@ -21,3 +21,10 @@ pwd	pwd
 npm	npm
 ccr	ccr
 qwen	qwen
+pom	pom
+bash	bash
+PR	pr
+ai	ai
+push	push
+xiongdei	xiongdei
+sql	sql

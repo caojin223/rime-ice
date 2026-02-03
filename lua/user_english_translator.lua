@@ -111,6 +111,11 @@ function M.func(input, seg, env)
         end
     end
     
+    -- 单个大写字母不进行补全，以免干扰输入（优先匹配字母本身）
+    if input:match("^[A-Z]$") then
+        return
+    end
+
     -- 查找前缀匹配的词条（补全功能）
     for code, words in pairs(env.user_words) do
         if code ~= input_lower and code:sub(1, #input_lower) == input_lower then

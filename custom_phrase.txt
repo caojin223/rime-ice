@@ -615,3 +615,5 @@ U盘	upan	100
 左	zuo	99
 ←	zuo	98
 昨晚	zuow	100
+正在	zz	100
+找找	zz	99
