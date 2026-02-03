@@ -131,6 +131,8 @@ cd	cd	100
 烦	fan	98
 方	fang	100
 放	fang	99
+发送	fas	100
+发生	fas	99
 飞	fei	100
 非常	feic	100
 分	fen	100
@@ -298,6 +300,8 @@ Msgbox	msg	100
 没有	my	100
 年	n	100
 那	na	100
+拿	na	99
+哪	na	98
 奶	nai	100
 难	nan	100
 男	nan	99

@@ -13,3 +13,11 @@ ccy	ccy
 bug	bug
 kufox	kufox
 meegle	meegle
+ryan	ryan
+jan	jan
+db	db
+jdk	jdk
+pwd	pwd
+npm	npm
+ccr	ccr
+qwen	qwen
