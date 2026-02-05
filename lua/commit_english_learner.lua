@@ -9,7 +9,7 @@
 --
 -- 可选配置项：
 -- commit_english_learner:
---   min_length: 2      # 最小学习长度，默认 2
+--   min_length: 3      # 最小学习长度，默认 3
 --   user_dict_file: en_dicts/user_en.txt  # 用户英文词典文件路径
 --
 -- 删除快捷键：自动读取 editor/bindings 中的 delete_candidate 配置，与中文删除方式一致
@@ -129,7 +129,7 @@ function M.init(env)
     local config = env.engine.schema.config
     
     -- 读取配置
-    env.min_length = config:get_int("commit_english_learner/min_length") or 2
+    env.min_length = config:get_int("commit_english_learner/min_length") or 3
     local user_dict_file = config:get_string("commit_english_learner/user_dict_file") or "en_dicts/user_en.txt"
     
     -- 读取删除快捷键（与中文删除保持一致，从 editor/bindings 读取）
