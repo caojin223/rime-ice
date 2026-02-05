@@ -53,6 +53,7 @@ agent	agent	1000
 并	bing	100
 病	bing	99
 兵	bing	98
+不	bu	100
 才	c	100
 才	cai	100
 菜	cai	99
@@ -275,6 +276,7 @@ localhost	local	100
 慢	man	99
 忙	mang	100
 毛	mao	100
+么	me	100
 每	mei	100
 美	mei	99
 每天	meit	100
