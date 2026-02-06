@@ -50,3 +50,5 @@ kimi	kimi
 opencode	opencode
 PrUrl	prurl
 put	put
+iflow	iflow
+ps	ps

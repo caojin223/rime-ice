@@ -129,7 +129,7 @@ function M.init(env)
     local config = env.engine.schema.config
     
     -- 读取配置
-    env.min_length = config:get_int("commit_english_learner/min_length") or 3
+    env.min_length = config:get_int("commit_english_learner/min_length") or 2
     local user_dict_file = config:get_string("commit_english_learner/user_dict_file") or "en_dicts/user_en.txt"
     
     -- 读取删除快捷键（与中文删除保持一致，从 editor/bindings 读取）

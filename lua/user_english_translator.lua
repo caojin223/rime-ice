@@ -89,6 +89,7 @@ function M.func(input, seg, env)
     end
     
     local input_lower = input:lower()
+    local input_len = #input_lower
     
     -- 检查文件是否有更新（每2秒检查一次，避免频繁IO）
     local current_time = os.time()
@@ -116,13 +117,14 @@ function M.func(input, seg, env)
         return
     end
 
-    -- 查找前缀匹配的词条（补全功能）
-    for code, words in pairs(env.user_words) do
-        if code ~= input_lower and code:sub(1, #input_lower) == input_lower then
-            for _, word in ipairs(words) do
-                local cand = Candidate("user_english", seg.start, seg._end, word, "~")
-                cand.quality = 50
-                yield(cand)
+    if input_len >= 3 then
+        for code, words in pairs(env.user_words) do
+            if code ~= input_lower and code:sub(1, input_len) == input_lower then
+                for _, word in ipairs(words) do
+                    local cand = Candidate("user_english", seg.start, seg._end, word, "~")
+                    cand.quality = 50
+                    yield(cand)
+                end
             end
         end
     end
