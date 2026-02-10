@@ -408,6 +408,9 @@ Msgbox	msg	100
 事	shi	100
 时	shi	99
 时候	shih	100
+时间	shij	100
+时间	shijian	100
+实践	shijian	99
 手	shou	100
 收	shou	99
 书	shu	100
@@ -541,6 +544,8 @@ U盘	upan	100
 英	ying	100
 应	ying	99
 以为	yiwei	100
+一下	yix	100
+以下	yix	99
 有没有	ymy	100
 也没有	ymy	99
 哟	yo	100
