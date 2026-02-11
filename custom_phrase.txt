@@ -54,6 +54,7 @@ agent	agent	1000
 病	bing	99
 兵	bing	98
 不	bu	100
+不是	bus	100
 才	c	100
 才	cai	100
 菜	cai	99
@@ -369,6 +370,7 @@ Msgbox	msg	100
 确认	quer	100
 群	qun	100
 人	r	100
+然	ran	100
 让	rang	100
 热	re	100
 惹	re	99
@@ -546,6 +548,8 @@ U盘	upan	100
 以为	yiwei	100
 一下	yix	100
 以下	yix	99
+一下	yixia	100
+以下	yixia	99
 有没有	ymy	100
 也没有	ymy	99
 哟	yo	100

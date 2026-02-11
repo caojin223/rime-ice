@@ -85,27 +85,6 @@ end
 function M.func(input, env)
     -- filter start
     local code = env.engine.context.input
-    if code:match("^[a-zA-Z]+$") then
-        local exact = {}
-        local others = {}
-        for cand in input:iter() do
-            if cand.text == code then
-                if cand.quality == nil or cand.quality < 90 then
-                    cand.quality = 90
-                end
-                table.insert(exact, cand)
-            else
-                table.insert(others, cand)
-            end
-        end
-        for _, cand in ipairs(exact) do
-            yield(cand)
-        end
-        for _, cand in ipairs(others) do
-            yield(cand)
-        end
-        return
-    end
     if M.map[code] then
         local pending_cands = {}
         local index = 0

@@ -76,3 +76,4 @@ KufoxInfo	kufoxinfo
 Vaule	vaule
 fastjson	fastjson
 cli	cli
+rang	rang

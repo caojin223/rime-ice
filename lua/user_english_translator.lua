@@ -107,7 +107,7 @@ function M.func(input, seg, env)
     if env.user_words[input_lower] then
         for _, word in ipairs(env.user_words[input_lower]) do
             local cand = Candidate("user_english", seg.start, seg._end, word, "☆")
-            cand.quality = 100  -- 高权重，确保排在前面
+            cand.quality = 60  -- 权重60，高于普通英文(1.1)，但低于custom_phrase(99)
             yield(cand)
         end
     end
@@ -122,7 +122,7 @@ function M.func(input, seg, env)
             if code ~= input_lower and code:sub(1, input_len) == input_lower then
                 for _, word in ipairs(words) do
                     local cand = Candidate("user_english", seg.start, seg._end, word, "~")
-                    cand.quality = 50
+                    cand.quality = 50 -- 前缀匹配权重50
                     yield(cand)
                 end
             end
