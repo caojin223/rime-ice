@@ -374,3 +374,6 @@ Thanks to JetBrains for the OSS development license.
 
 **版本**：2026-02-02
 
+删除候选字：
+1、将焦点移动到候选字上
+2、按下Shift+Fn+Delete

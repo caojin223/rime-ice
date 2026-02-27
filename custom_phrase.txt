@@ -249,6 +249,8 @@ localhost	lh	100
 里	li	100
 连	lian	100
 两	liang	100
+连接	lianj	100
+链接	lianj	99
 了	liao	100
 林	lin	100
 流	liu	100
