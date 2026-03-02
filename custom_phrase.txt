@@ -158,6 +158,8 @@ cd	cd	100
 归	gui	100
 滚	gun	100
 过	guo	100
+过来	guol	100
+过滤	guol	99
 和	h	100
 哈	ha	100
 还	hai	100
