@@ -108,3 +108,8 @@ Moe	moe
 ylm	ylm
 yml	yml
 claude	claude
+xx	xx
+kc	kc
+openapi	openapi
+zonlin	zonlin
+ll	ll

@@ -297,6 +297,7 @@ localhost	local	100
 民	min	100
 明	ming	100
 名	ming	99
+明天	mingt	100
 模	mo	100
 某	mou	100
 马上到！	msd	98
