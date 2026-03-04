@@ -13,6 +13,14 @@ ccy	ccy
 bug	bug
 kufox	kufox
 meegle	meegle
+opencode	opencode
+pwd	pwd
+openclaw	openclaw
+tab	tab
+Jio	jio
+Qwen	qwen
+tui	tui
+md	md
 ryan	ryan
 jan	jan
 db	db
@@ -108,6 +116,7 @@ Moe	moe
 ylm	ylm
 yml	yml
 claude	claude
+at	at
 xx	xx
 kc	kc
 openapi	openapi
