@@ -113,3 +113,13 @@ kc	kc
 openapi	openapi
 zonlin	zonlin
 ll	ll
+Antigravity	antigravity
+hot	hot
+userId	userid
+FeignClient	feignclient
+xgray	xgray
+HttpClient	httpclient
+OkHttpClient	okhttpclient
+box	box
+workbench	workbench
+svc	svc

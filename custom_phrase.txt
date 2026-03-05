@@ -119,7 +119,7 @@ cd	cd	100
 当然	dr	100
 多少	ds	100
 对	dui	100
-√	dui	99
+✓	dui	99
 多	duo	100
 东西	dx	100
 东西	dxi	100
