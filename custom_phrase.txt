@@ -184,6 +184,8 @@ cd	cd	100
 昏	hun	99
 火	huo	100
 活	huo	99
+或者	huoz	100
+活着	huoz	99
 好像	hx	100
 就	j	100
 java	java	100
@@ -545,6 +547,7 @@ U盘	upan	100
 应该	yg	100
 一	yi	100
 以	yi	99
+一下	yixa	100
 已经	yij	100
 音	yin	100
 引	yin	99
@@ -553,6 +556,7 @@ U盘	upan	100
 以为	yiwei	100
 一下	yix	100
 以下	yix	99
+一下	yixai	100
 一下	yixia	100
 以下	yixia	99
 有没有	ymy	100
