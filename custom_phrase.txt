@@ -179,6 +179,8 @@ cd	cd	100
 怀	huai	99
 换	huan	100
 黄	huang	100
+环境	huanj	100
+缓解	huanj	99
 会	hui	100
 混	hun	100
 昏	hun	99
