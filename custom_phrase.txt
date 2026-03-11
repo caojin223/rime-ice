@@ -32,6 +32,8 @@
 agent	agent	1000
 爱	ai	100
 安	an	100
+安装	anz	100
+按照	anz	99
 不	b	100
 把	ba	100
 白	bai	100
@@ -549,6 +551,10 @@ U盘	upan	100
 应该	yg	100
 一	yi	100
 以	yi	99
+一般	yib	100
+一半	yib	99
+一般	yiban	100
+一半	yiban	99
 一下	yixa	100
 已经	yij	100
 音	yin	100

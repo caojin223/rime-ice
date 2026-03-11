@@ -135,3 +135,9 @@ svc	svc
 at	at
 mwg	mwg
 nc	nc
+staus	staus
+tag	tag
+ux	ux
+nslookup	nslookup
+SonarQube	sonarqube
+and	and
