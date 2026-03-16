@@ -57,6 +57,10 @@ agent	agent	1000
 兵	bing	98
 不	bu	100
 不是	bus	100
+不在	buz	100
+不再	buz	99
+不在	buzai	100
+不再	buzai	99
 才	c	100
 才	cai	100
 菜	cai	99

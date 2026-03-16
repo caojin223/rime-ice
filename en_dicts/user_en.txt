@@ -141,3 +141,15 @@ ux	ux
 nslookup	nslookup
 SonarQube	sonarqube
 and	and
+startTime	starttime
+doc	doc
+jsonb	jsonb
+crId	crid
+TaskId	taskid
+postsql	postsql
+gre	gre
+TeamName	teamname
+LocalStorage	localstorage
+Fale	fale
+deviceNo	deviceno
+Zhang	zhang
