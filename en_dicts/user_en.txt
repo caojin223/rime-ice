@@ -153,3 +153,12 @@ LocalStorage	localstorage
 Fale	fale
 deviceNo	deviceno
 Zhang	zhang
+repo	repo
+less	less
+css	css
+projectKey	projectkey
+pho	pho
+Resp	resp
+trae	trae
+feishu	feishu
+hold	hold

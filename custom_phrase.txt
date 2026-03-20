@@ -57,6 +57,10 @@ agent	agent	1000
 兵	bing	98
 不	bu	100
 不是	bus	100
+不同	but	100
+不通	but	99
+不同	butong	100
+不通	butong	99
 不在	buz	100
 不再	buz	99
 不在	buzai	100
@@ -108,6 +112,7 @@ cd	cd	100
 待会	daihui	100
 但	dan	100
 当	dang	100
+但是	dans	100
 到	dao	100
 打算	das	100
 得	de	100
@@ -320,6 +325,10 @@ Msgbox	msg	100
 那	na	100
 拿	na	99
 哪	na	98
+那个	nag	100
+哪个	nag	99
+那个	nage	100
+哪个	nage	99
 奶	nai	100
 难	nan	100
 男	nan	99
