@@ -155,11 +155,15 @@ cd	cd	100
 该	gai	100
 干	gan	100
 刚	gang	100
+刚刚	gangg	100
+各个	gangg	99
 高	gao	100
 搞	gao	99
 个	ge	100
 给	gei	100
 更	geng	100
+刚刚	gg	100
+各个	gg	99
 够	gou	100
 狗	gou	99
 古	gu	100
@@ -375,6 +379,8 @@ Msgbox	msg	100
 千	qian	98
 强	qiang	100
 抢	qiang	99
+前面	qianm	100
+签名	qianm	99
 巧	qiao	100
 瞧	qiao	99
 桥	qiao	98
@@ -580,6 +586,8 @@ U盘	upan	100
 一下	yixai	100
 一下	yixia	100
 以下	yixia	99
+一样	yiy	100
+已有	yiy	99
 有没有	ymy	100
 也没有	ymy	99
 哟	yo	100
