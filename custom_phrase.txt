@@ -492,6 +492,8 @@ Msgbox	msg	100
 天	tian	100
 跳	tiao	100
 条	tiao	99
+调整	tiaoz	100
+跳转	tiaoz	99
 铁	tie	100
 听	ting	100
 他们	tm	100
