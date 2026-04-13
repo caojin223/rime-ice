@@ -56,6 +56,8 @@ agent	agent	1000
 病	bing	99
 兵	bing	98
 不	bu	100
+不了	bul	100
+不了	bule	100
 不是	bus	100
 不同	but	100
 不通	but	99

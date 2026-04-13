@@ -186,3 +186,9 @@ get	get
 csdn	csdn
 tar	tar
 gid	gid
+tansit	tansit
+dec	dec
+rn	rn
+hu	hu
+PAI	pai
+ma	ma
