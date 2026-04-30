@@ -420,6 +420,8 @@ Msgbox	msg	100
 润	run	100
 弱	ruo	100
 若	ruo	99
+容易	ryi	100
+任意	ryi	99
 是	s	100
 噻	sai	100
 赛	sai	99
@@ -494,8 +496,8 @@ Msgbox	msg	100
 天	tian	100
 跳	tiao	100
 条	tiao	99
-跳转	tiaoz	100
-调整	tiaoz	99
+调整	tiaoz	100
+跳转	tiaoz	99
 铁	tie	100
 听	ting	100
 他们	tm	100
@@ -539,6 +541,8 @@ U盘	upan	100
 想	xiang	100
 像	xiang	99
 小	xiao	100
+下载	xiaz	100
+下钻	xiaz	99
 写	xie	100
 些	xie	99
 新	xin	100
@@ -642,6 +646,8 @@ U盘	upan	100
 值	zhi	99
 指	zhi	98
 支持	zhic	100
+直到	zhid	100
+指导	zhid	99
 中	zhong	100
 周	zhou	100
 州	zhou	99
