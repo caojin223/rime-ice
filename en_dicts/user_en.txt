@@ -60,7 +60,6 @@ PrUrl	prurl
 put	put
 iflow	iflow
 ps	ps
-apikey	apikey
 coder	coder
 vllm	vllm
 gitUrl	giturl
@@ -70,7 +69,6 @@ jackin	jackin
 lu	lu
 json	json
 KufoxClient	kufoxclient
-shij	shij
 bit	bit
 axios	axios
 Lint	lint
@@ -208,3 +206,15 @@ sdkId	sdkid
 kone	kone
 openId	openid
 grayId	grayid
+zsh	zsh
+kume	kume
+repos	repos
+cc	cc
+ken	ken
+CA	ca
+Dao	dao
+willian	willian
+buddy	buddy
+ops	ops
+ucenter	ucenter
+ct	ct

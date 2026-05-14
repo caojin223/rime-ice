@@ -553,6 +553,7 @@ U盘	upan	100
 凶	xiong	99
 兄	xiong	98
 修	xiu	100
+希望	xiw	100
 需	xu	100
 许	xu	99
 选	xuan	100
@@ -560,6 +561,7 @@ U盘	upan	100
 讯	xun	100
 寻	xun	99
 迅	xun	98
+希望	xw	100
 现在	xz	100
 有	y	100
 呀	ya	100
