@@ -203,7 +203,6 @@ prDto	prdto
 waitTime	waittime
 gruop	gruop
 sdkId	sdkid
-kone	kone
 openId	openid
 grayId	grayid
 zsh	zsh
@@ -218,3 +217,7 @@ buddy	buddy
 ops	ops
 ucenter	ucenter
 ct	ct
+yubikey	yubikey
+del	del
+txt	txt
+Kone	kone

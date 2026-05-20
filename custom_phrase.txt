@@ -153,6 +153,7 @@ cd	cd	100
 分	fen	100
 风	feng	100
 分享	fenx	100
+分支	fenz	100
 个	g	100
 该	gai	100
 干	gan	100
